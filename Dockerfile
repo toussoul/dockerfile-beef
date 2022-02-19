@@ -31,4 +31,4 @@ EXPOSE 3000
 
 WORKDIR /opt/beef/beef
 
-CMD ./beef
+CMD gem install execjs; ./beef
