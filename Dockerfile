@@ -30,7 +30,7 @@ ENV LANG fr_FR.UTF-8
 ENV LANGUAGE fr_FR:fr
 
 RUN cd /opt/beef/beef && \
-    bundle install
+    ./install
 
 ADD config.yaml config.yaml
 
