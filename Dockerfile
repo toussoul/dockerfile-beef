@@ -35,8 +35,7 @@ RUN cd /opt/beef/beef && \
 ADD config.yaml config.yaml
 
 EXPOSE 3000
-
-RUN gem2.7 install execjs && gem2.7 update
+RUN gem install --no-rdoc --no-ri bundler
 
 WORKDIR /opt/beef/beef
 
