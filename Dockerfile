@@ -20,7 +20,7 @@ RUN mkdir -p /opt/beef/ && chmod 777 /opt/beef/ -R
 RUN cd /opt/beef/ && \
     git clone git://github.com/beefproject/beef.git 
 
-RUN chmod 777 /opt/beef/ -R && useradd -m beef
+RUN chmod 777 /opt/beef/ -R && useradd -m beef && echo "beef    ALL=NOPASSWD: ALL" >> /etc/sudoers
 
 USER beef
 
@@ -30,7 +30,7 @@ ENV LANG fr_FR.UTF-8
 ENV LANGUAGE fr_FR:fr
 
 RUN cd /opt/beef/beef && \
-    echo "y  y y y y y y y" | ./install
+    echo "y " | ./install
 
 ADD config.yaml config.yaml
 
