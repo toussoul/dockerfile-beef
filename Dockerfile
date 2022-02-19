@@ -25,10 +25,10 @@ RUN chmod 777 /opt/beef/ -R
 RUN cd /opt/beef/beef && \
     bundle install
 
-ADD config.yaml beef/config.yaml
+ADD config.yaml config.yaml
 
 EXPOSE 3000
 
 WORKDIR /opt/beef/beef
 
-CMD gem install execjs; ./beef
+CMD ./beef
