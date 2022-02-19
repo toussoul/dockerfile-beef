@@ -29,7 +29,7 @@ ADD config.yaml config.yaml
 
 EXPOSE 3000
 
-RUN gem install execjs && gem update
+RUN gem2.7 install execjs && gem update
 
 WORKDIR /opt/beef/beef
 
