@@ -11,7 +11,7 @@ WORKDIR /opt
     
 RUN mkdir -p /opt/beef/ && chmod 777 /opt/beef/ -R
 
-RUN apt-get install git && \
+RUN apt-get update -y && apt-get install git -y && \
     cd /opt/beef/ && \
     git clone https://github.com/toussoul/beef.git 
 
